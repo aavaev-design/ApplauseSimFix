@@ -411,7 +411,7 @@ export const AIAgentsSection = () => {
 
                 <div className="mt-8">
                   <a
-                    href="https://www.aasmartsystems.com"
+                    href="https://www.applausesim.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-white text-zinc-950 hover:bg-zinc-200 transition-all font-semibold text-sm shadow-md cursor-pointer"

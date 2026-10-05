@@ -35,14 +35,14 @@ export default function SplineBackground() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const splineAppRef = useRef<any>(null);
 
-  // Fallback timeout: If Spline doesn't load in 5 seconds, trigger the fallback gradient
+  // Fallback safety timeout: If Spline doesn't load in 20 seconds, trigger the fallback gradient
   useEffect(() => {
     const timer = setTimeout(() => {
       if (!isLoaded) {
         console.warn("Spline took too long to load. Falling back to static gradient.");
         setHasError(true);
       }
-    }, 5000);
+    }, 20000);
 
     return () => clearTimeout(timer);
   }, [isLoaded]);
@@ -118,7 +118,7 @@ export default function SplineBackground() {
       >
         {!hasError && (
           <Spline
-            scene="https://prod.spline.design/JyWmDORsck24PnTB/scene.splinecode"
+            scene="/scene.splinecode"
             onLoad={handleSplineLoad}
             onError={handleSplineError}
             className="w-full h-full"
